@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cumplimiento Aduanero | Aduanex</title>
+    <style>
+      :root {
+        --navy: #1a1c2e;
+        --green: #3b6334;
+        --bg: #f4f7fb;
+        --card: #ffffff;
+        --muted: #5b6475;
+        --line: #dce3ee;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: var(--navy);
+        background: radial-gradient(circle at 15% 10%, #e7f2e5 0, transparent 38%),
+          radial-gradient(circle at 90% 20%, #e6edf8 0, transparent 30%),
+          var(--bg);
+        line-height: 1.55;
+      }
+
+      .container {
+        width: min(1080px, 92%);
+        margin: 0 auto;
+      }
+
+      header {
+        padding: 24px 0 10px;
+      }
+
+      .brand {
+        width: 240px;
+        max-width: 60vw;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 32px;
+        align-items: start;
+        padding: 30px 0 20px;
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 999px;
+        border: 1px solid #b9d4b4;
+        background: #eaf5e7;
+        color: #2f5429;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 16px 0 12px;
+        font-size: clamp(30px, 6vw, 56px);
+        line-height: 1.05;
+      }
+
+      h1 .green {
+        color: var(--green);
+      }
+
+      .lead {
+        color: var(--muted);
+        font-size: clamp(16px, 2vw, 21px);
+        max-width: 62ch;
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        padding: 24px;
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.07);
+      }
+
+      .card h3 {
+        margin: 0 0 8px;
+        font-size: 22px;
+      }
+
+      .kpi {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 14px;
+      }
+
+      .kpi div {
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 12px;
+      }
+
+      .kpi strong {
+        display: block;
+        font-size: 26px;
+        line-height: 1;
+        margin-bottom: 6px;
+      }
+
+      section {
+        padding: 18px 0;
+      }
+
+      h2 {
+        margin: 8px 0 14px;
+        font-size: clamp(24px, 3vw, 34px);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .item {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 16px;
+      }
+
+      .item h4 {
+        margin: 0 0 8px;
+        font-size: 18px;
+      }
+
+      .item p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .list {
+        margin: 0;
+        padding-left: 18px;
+        color: var(--muted);
+      }
+
+      .list li + li {
+        margin-top: 8px;
+      }
+
+      .cta {
+        margin: 18px 0 40px;
+        background: linear-gradient(130deg, #1a1c2e 0%, #25305a 60%, #335f35 100%);
+        color: #fff;
+        border-radius: 24px;
+        padding: 26px;
+      }
+
+      .cta p {
+        margin: 6px 0 0;
+        color: #e2e8f0;
+      }
+
+      .actions {
+        display: flex;
+        gap: 12px;
+        margin-top: 18px;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        border: 0;
+        border-radius: 999px;
+        padding: 12px 18px;
+        font-weight: 700;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .btn.primary {
+        background: #ffffff;
+        color: var(--navy);
+      }
+
+      .btn.secondary {
+        background: transparent;
+        color: #ffffff;
+        border: 1px solid rgba(255, 255, 255, 0.45);
+      }
+
+      footer {
+        color: #6b7280;
+        font-size: 13px;
+        text-align: center;
+        padding: 14px 0 24px;
+      }
+
+      @media (max-width: 920px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <img class="brand" src="/horizontal_nofondo.png" alt="Aduanex" />
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div>
+          <span class="badge">Cumplimiento sin friccion</span>
+          <h1>Controla el <span class="green">cumplimiento aduanero</span> sin detener la operacion.</h1>
+          <p class="lead">
+            Centraliza validaciones, reglas de negocio y evidencia documental para reducir errores de captura, prevenir
+            multas y mantener trazabilidad completa por pedimento.
+          </p>
+        </div>
+        <aside class="card">
+          <h3>Resumen Ejecutivo</h3>
+          <p class="lead" style="font-size: 15px; margin: 0;">
+            Aduanex transforma el cumplimiento en un flujo guiado: valida antes de enviar, marca riesgos en tiempo real
+            y deja evidencia lista para auditoria interna o externa.
+          </p>
+          <div class="kpi">
+            <div>
+              <strong>75%</strong>
+              <span>Menos recaptura operativa</span>
+            </div>
+            <div>
+              <strong>12/12</strong>
+              <span>Checklist documental completo</span>
+            </div>
+            <div>
+              <strong>100%</strong>
+              <span>Trazabilidad por expediente</span>
+            </div>
+            <div>
+              <strong>0</strong>
+              <span>Sorpresas en auditoria</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section>
+        <h2>Que incluye el modulo de Cumplimiento</h2>
+        <div class="grid">
+          <article class="item">
+            <h4>Validacion por etapa</h4>
+            <p>Reglas previas por modulo para evitar avanzar con datos incompletos o inconsistentes.</p>
+          </article>
+          <article class="item">
+            <h4>Control normativo</h4>
+            <p>Aplicacion de criterios operativos para Anexo 22, catalogos y politicas internas.</p>
+          </article>
+          <article class="item">
+            <h4>Bitacora auditables</h4>
+            <p>Registro de cambios, responsable, fecha y evidencia para cada correccion.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta">
+        <h2 style="margin: 0;">Conoce la experiencia completa de Cumplimiento</h2>
+        <p>
+          Agenda una demostracion y revisa en vivo como estandarizar validaciones, reducir retrabajo y acelerar auditorias.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="/">Volver al landing</a>
+          <a class="btn secondary" href="mailto:contacto@aduanex.mx">Solicitar demo de cumplimiento</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> ADUANEX. Cumplimiento aduanero inteligente.
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
