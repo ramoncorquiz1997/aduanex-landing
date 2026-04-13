@@ -19,7 +19,7 @@ import {
   Building2,
   MessageCircle,
 } from 'lucide-react';
-
+import aduanexVideo from './assets/ad_aduanex.mp4'; // Cambia 'tu-video.mp4' por el nombre real
 const navItems = [
   { key: 'solucion', label: 'Solucion' },
   { key: 'cumplimiento', label: 'Cumplimiento' },
@@ -148,7 +148,20 @@ const App = () => {
             <h2 className="text-[#3B6334] font-black tracking-[0.2em] uppercase text-sm italic">Cero Complicaciones</h2>
             <p className="text-4xl md:text-5xl font-black text-[#1A1C2E] tracking-tight">La simplificacion que necesitas</p>
           </div>
-
+          {/* --- NUEVA SECCIÓN DE VIDEO --- */}
+          <div className="max-w-4xl mx-auto mb-20">
+            <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-slate-50">
+              <video 
+                controls 
+                className="w-full h-auto block"
+                poster="/horizontal_nofondo.png" // Opcional: una imagen mientras carga
+              >
+                <source src={aduanexVideo} type="video/mp4" />
+                Tu navegador no soporta videos.
+              </video>
+            </div>
+          </div>
+          {/* ------------------------------ */}
           <div className="grid md:grid-cols-3 gap-10">
             {[
               {
