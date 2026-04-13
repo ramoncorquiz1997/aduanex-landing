@@ -14,17 +14,20 @@ import {
   Activity,
   Clock3,
   FolderKanban,
-  FileText,  Mail,
+  FileText,  
+  Mail,
   Phone,
   Building2,
   MessageCircle,
 } from 'lucide-react';
-import aduanexVideo from './assets/ad_aduanex.mp4'; // Cambia 'tu-video.mp4' por el nombre real
+import aduanexVideo from './assets/ad_aduanex.mp4'; 
+
 const navItems = [
-  { key: 'solucion', label: 'Solucion' },
+  { key: 'solucion', label: 'Solución' },
   { key: 'cumplimiento', label: 'Cumplimiento' },
-  { key: 'operacion', label: 'Operacion' },
-  { key: 'expedientes', label: 'Expedientes' },];
+  { key: 'operacion', label: 'Operación' },
+  { key: 'expedientes', label: 'Expedientes' },
+];
 
 const App = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -72,10 +75,10 @@ const App = () => {
               <span>Control Operativo Total</span>
             </div>
             <h1 className="text-5xl lg:text-7xl font-black text-[#1A1C2E] leading-[1.1] tracking-tight">
-              Simplifica tu operacion aduanal de <span className="text-[#3B6334]">Punta a Punta.</span>
+              Simplifica tu operación aduanal de <span className="text-[#3B6334]">Punta a Punta.</span>
             </h1>
             <p className="text-xl text-slate-500 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
-              Elimina cuellos de botella, estandariza procesos y recupera el control de tus expedientes con una plataforma logica y facil de usar.
+              Elimina cuellos de botella, estandariza procesos y recupera el control de tus expedientes con una plataforma lógica y fácil de usar.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
               <button
@@ -107,7 +110,7 @@ const App = () => {
                 <div className="flex items-center justify-between mb-8">
                   <div>
                     <h3 className="font-black text-[#1A1C2E] text-lg">Referencia: REF-AD-2024</h3>
-                    <p className="text-xs text-slate-400 font-bold uppercase tracking-tighter">Importacion Definitiva</p>
+                    <p className="text-xs text-slate-400 font-bold uppercase tracking-tighter">Importación Definitiva</p>
                   </div>
                   <span className="px-4 py-1.5 bg-green-100 text-[#3B6334] text-xs font-black rounded-xl flex items-center gap-1.5 uppercase border border-green-200">
                     <CheckCircle2 size={14} /> Validado
@@ -127,7 +130,7 @@ const App = () => {
                   <div className="grid grid-cols-2 gap-4">
                     <div className="p-4 bg-blue-50/50 rounded-2xl border border-blue-100 flex flex-col gap-1">
                       <span className="text-[10px] font-black text-blue-600 uppercase">Estatus Actual</span>
-                      <span className="text-sm font-bold text-blue-900">Modulacion</span>
+                      <span className="text-sm font-bold text-blue-900">Modulación</span>
                     </div>
                     <div className="p-4 bg-green-50/50 rounded-2xl border border-green-100 flex flex-col gap-1">
                       <span className="text-[10px] font-black text-[#3B6334] uppercase">Expediente</span>
@@ -144,40 +147,40 @@ const App = () => {
 
       <section className="py-24 bg-white relative">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-20 space-y-4">
+          <div className="text-center mb-12 space-y-4">
             <h2 className="text-[#3B6334] font-black tracking-[0.2em] uppercase text-sm italic">Cero Complicaciones</h2>
-            <p className="text-4xl md:text-5xl font-black text-[#1A1C2E] tracking-tight">La simplificacion que necesitas</p>
+            <p className="text-4xl md:text-5xl font-black text-[#1A1C2E] tracking-tight">La simplificación que necesitas</p>
           </div>
-          {/* --- NUEVA SECCIÓN DE VIDEO --- */}
+          
           <div className="max-w-4xl mx-auto mb-20">
             <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-slate-50">
               <video 
                 controls 
                 className="w-full h-auto block"
-                poster="/horizontal_nofondo.png" // Opcional: una imagen mientras carga
+                poster="/horizontal_nofondo.png"
               >
                 <source src={aduanexVideo} type="video/mp4" />
                 Tu navegador no soporta videos.
               </video>
             </div>
           </div>
-          {/* ------------------------------ */}
+
           <div className="grid md:grid-cols-3 gap-10">
             {[
               {
                 icon: <FastForward size={32} />,
-                title: 'Flujos Logicos',
-                desc: 'Disenado para seguir el orden real de la operacion aduanera, evitando recapturas innecesarias y redundancia de datos.',
+                title: 'Flujos Lógicos',
+                desc: 'Diseñado para seguir el orden real de la operación aduanera, evitando recapturas innecesarias y redundancia de datos.',
               },
               {
                 icon: <FileCheck size={32} />,
-                title: 'Validacion por Paso',
-                desc: 'El sistema asegura la integridad del Anexo 22 antes de permitir avanzar al siguiente modulo.',
+                title: 'Validación por Paso',
+                desc: 'El sistema asegura la integridad del Anexo 22 antes de permitir avanzar al siguiente módulo.',
               },
               {
                 icon: <Layers size={32} />,
                 title: 'Expediente Digital',
-                desc: 'Documentacion centralizada, indexada y accesible para auditorias rapidas y eficientes.',
+                desc: 'Documentación centralizada, indexada y accesible para auditorías rápidas y eficientes.',
               },
             ].map((item, i) => (
               <div key={i} className="group p-10 bg-slate-50 rounded-[2.5rem] border-2 border-transparent hover:border-green-100 hover:bg-white hover:shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all duration-500">
@@ -210,17 +213,17 @@ const App = () => {
           <div className="bg-white rounded-3xl border border-slate-200 p-7 shadow-sm">
             <ClipboardCheck className="text-[#3B6334] mb-4" size={28} />
             <h3 className="text-2xl font-black text-[#1A1C2E] mb-2">Checklist por etapa</h3>
-            <p className="text-slate-500">Validaciones obligatorias por modulo para no avanzar con datos incompletos.</p>
+            <p className="text-slate-500">Validaciones obligatorias por módulo para no avanzar con datos incompletos.</p>
           </div>
           <div className="bg-white rounded-3xl border border-slate-200 p-7 shadow-sm">
             <AlertTriangle className="text-[#3B6334] mb-4" size={28} />
             <h3 className="text-2xl font-black text-[#1A1C2E] mb-2">Alertas preventivas</h3>
-            <p className="text-slate-500">Deteccion temprana de inconsistencias antes de que afecten el despacho.</p>
+            <p className="text-slate-500">Detección temprana de inconsistencias antes de que afecten el despacho.</p>
           </div>
           <div className="bg-white rounded-3xl border border-slate-200 p-7 shadow-sm">
             <FileCheck className="text-[#3B6334] mb-4" size={28} />
             <h3 className="text-2xl font-black text-[#1A1C2E] mb-2">Evidencia auditable</h3>
-            <p className="text-slate-500">Historial de cambios, responsables y soporte documental listo para auditoria.</p>
+            <p className="text-slate-500">Historial de cambios, responsables y soporte documental listo para auditoría.</p>
           </div>
         </div>
       </div>
@@ -233,26 +236,26 @@ const App = () => {
         <div className="max-w-4xl space-y-5">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-xs font-black uppercase tracking-widest shadow-sm">
             <Activity size={14} />
-            <span>Operacion diaria</span>
+            <span>Operación diaria</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-black text-[#1A1C2E] leading-tight">Control operativo en tiempo real.</h1>
-          <p className="text-lg md:text-xl text-slate-500 leading-relaxed">Visualiza prioridades del dia, cuellos de botella y avance por modulo desde un solo tablero.</p>
+          <p className="text-lg md:text-xl text-slate-500 leading-relaxed">Visualiza prioridades del día, cuellos de botella y avance por módulo desde un solo tablero.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           <div className="bg-white rounded-3xl border border-slate-200 p-7 shadow-sm">
             <Clock3 className="text-[#3B6334] mb-4" size={28} />
             <h3 className="text-2xl font-black text-[#1A1C2E] mb-2">Tiempos y SLA</h3>
-            <p className="text-slate-500">Medicion por etapa para detectar retrasos y priorizar lo urgente.</p>
+            <p className="text-slate-500">Medición por etapa para detectar retrasos y priorizar lo urgente.</p>
           </div>
           <div className="bg-white rounded-3xl border border-slate-200 p-7 shadow-sm">
             <Activity className="text-[#3B6334] mb-4" size={28} />
-            <h3 className="text-2xl font-black text-[#1A1C2E] mb-2">Semaforos de riesgo</h3>
-            <p className="text-slate-500">Indicadores visuales para actuar rapido en operaciones sensibles.</p>
+            <h3 className="text-2xl font-black text-[#1A1C2E] mb-2">Semáforos de riesgo</h3>
+            <p className="text-slate-500">Indicadores visuales para actuar rápido en operaciones sensibles.</p>
           </div>
           <div className="bg-white rounded-3xl border border-slate-200 p-7 shadow-sm">
             <CheckCircle2 className="text-[#3B6334] mb-4" size={28} />
             <h3 className="text-2xl font-black text-[#1A1C2E] mb-2">Seguimiento por responsable</h3>
-            <p className="text-slate-500">Claridad sobre quien tiene cada tarea y que falta por cerrar.</p>
+            <p className="text-slate-500">Claridad sobre quién tiene cada tarea y qué falta por cerrar.</p>
           </div>
         </div>
       </div>
@@ -268,23 +271,23 @@ const App = () => {
             <span>Expedientes</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-black text-[#1A1C2E] leading-tight">Expediente digital completo y ordenado.</h1>
-          <p className="text-lg md:text-xl text-slate-500 leading-relaxed">Concentra documentos, evidencia y validaciones en un solo lugar con busqueda rapida por referencia.</p>
+          <p className="text-lg md:text-xl text-slate-500 leading-relaxed">Concentra documentos, evidencia y validaciones en un solo lugar con búsqueda rápida por referencia.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           <div className="bg-white rounded-3xl border border-slate-200 p-7 shadow-sm">
             <FileText className="text-[#3B6334] mb-4" size={28} />
             <h3 className="text-2xl font-black text-[#1A1C2E] mb-2">Documentos centralizados</h3>
-            <p className="text-slate-500">Toda la documentacion del despacho en un expediente unico.</p>
+            <p className="text-slate-500">Toda la documentación del despacho en un expediente único.</p>
           </div>
           <div className="bg-white rounded-3xl border border-slate-200 p-7 shadow-sm">
             <ClipboardCheck className="text-[#3B6334] mb-4" size={28} />
             <h3 className="text-2xl font-black text-[#1A1C2E] mb-2">Checklist completo</h3>
-            <p className="text-slate-500">Control de requisitos por tipo de operacion y aduana.</p>
+            <p className="text-slate-500">Control de requisitos por tipo de operación y aduana.</p>
           </div>
           <div className="bg-white rounded-3xl border border-slate-200 p-7 shadow-sm">
             <ShieldCheck className="text-[#3B6334] mb-4" size={28} />
             <h3 className="text-2xl font-black text-[#1A1C2E] mb-2">Trazabilidad total</h3>
-            <p className="text-slate-500">Versionado y registro de cambios para auditoria interna y externa.</p>
+            <p className="text-slate-500">Versionado y registro de cambios para auditoría interna y externa.</p>
           </div>
         </div>
       </div>
@@ -296,7 +299,7 @@ const App = () => {
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 items-start">
         <div className="bg-white rounded-[2rem] border border-slate-200 p-8 md:p-10 shadow-sm">
           <h1 className="text-4xl md:text-5xl font-black text-[#1A1C2E] leading-tight">Solicita tu demo</h1>
-          <p className="mt-4 text-lg text-slate-500">Cuéntanos tu operacion y te mostramos una demo enfocada en tu flujo real.</p>
+          <p className="mt-4 text-lg text-slate-500">Cuéntanos tu operación y te mostramos una demo enfocada en tu flujo real.</p>
 
           <form className="mt-8 space-y-4">
             <input type="text" placeholder="Nombre" className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:border-[#3B6334]" />
@@ -326,13 +329,13 @@ const App = () => {
           </div>
           <div className="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm">
             <Phone className="text-[#3B6334] mb-3" size={24} />
-            <p className="text-sm uppercase tracking-widest text-slate-400 font-bold">Telefono</p>
+            <p className="text-sm uppercase tracking-widest text-slate-400 font-bold">Teléfono</p>
             <p className="text-lg font-bold text-[#1A1C2E]">+52 646 109 3694</p>
           </div>
           <div className="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm">
             <Building2 className="text-[#3B6334] mb-3" size={24} />
             <p className="text-sm uppercase tracking-widest text-slate-400 font-bold">Cobertura</p>
-            <p className="text-lg font-bold text-[#1A1C2E]">Operaciones en Mexico y comercio exterior</p>
+            <p className="text-lg font-bold text-[#1A1C2E]">Operaciones en México y comercio exterior</p>
           </div>
         </div>
       </div>
@@ -355,7 +358,7 @@ const App = () => {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center gap-4">
-          <button onClick={() => goToPage('solucion')} className="text-left" aria-label="Ir a solucion">
+          <button onClick={() => goToPage('solucion')} className="text-left" aria-label="Ir a solución">
             <Logo />
           </button>
 
@@ -426,8 +429,8 @@ const App = () => {
           </nav>
           <div className="w-full max-w-2xl h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
           <div className="flex flex-col items-center gap-2">
-            <p className="text-slate-400 text-[10px] font-black uppercase tracking-[0.4em]">{new Date().getFullYear()} ADUANEX. Simplificacion Aduanal Inteligente.</p>
-            <p className="text-slate-300 text-[9px] font-bold">Hecho en Mexico para el mundo.</p>
+            <p className="text-slate-400 text-[10px] font-black uppercase tracking-[0.4em]">{new Date().getFullYear()} ADUANEX. Simplificación Aduanal Inteligente.</p>
+            <p className="text-slate-300 text-[9px] font-bold">Hecho en México para el mundo.</p>
           </div>
         </div>
       </footer>
@@ -436,4 +439,3 @@ const App = () => {
 };
 
 export default App;
-
